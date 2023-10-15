@@ -1,13 +1,13 @@
 @extends('template')
 
 @section('content')
-
-      <br>
-      <br>
-      <br>
-      <br>
-
+      <body>
+        <br>
+        <br>
+        <br>
+        <br>
       <div class="container">
+
          <section class="jumbotron text-center">
             <div class="container">
                <h1 class="jumbotron-heading">DropBix</h1>
@@ -19,11 +19,10 @@
             </div>
          </section>
       </div>
-      
-   </body>
-      <br>
-      <br>
-      <br>
-      <br>
-
- @endsection
+   
+        <br>
+        <br>
+        <br>
+        <br>
+      </body>
+@endsection
