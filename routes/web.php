@@ -15,17 +15,10 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/upload', function () {
-    return view('file.upload');
-})->name('upload');
+Route::get('/home', function () {    
+    return view('home');
+})->name('home');
 
-Route::get('/list-file', function () {
-    return view('file.list-file');
-})->name('list-file');
-
-Route::get('/detail-file', function () {
-    return view('file.detail-file');
-})->name('detail-file');
 
 Route::get('/daftar', function () {
     return view('users.daftar');
@@ -34,3 +27,18 @@ Route::get('/daftar', function () {
 Route::get('/login', function () {
     return view('users.login');
 })->name('login');
+
+
+Route::group(['middleware'=>'auth'], function() {
+    Route::get('/upload', function () {
+        return view('file.upload');
+    })->name('upload');
+
+    Route::post('upload', 'FileController@create');
+    Route::get('/list-file', 'FileController@get_list_file')->name('list-file');
+    Route::get('/detail-file/{id}', 'FileController@get_file')->name('detail-file');
+    Route::post('update', 'FileController@update')->name('update');
+});
+
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
+Auth::routes();
