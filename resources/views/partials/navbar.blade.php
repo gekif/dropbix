@@ -3,10 +3,12 @@
             <div class="navbar-header">
                <a class="navbar-brand" href="#">DropBix</a>
             </div>
+            
             <ul class="nav navbar-nav">
                <li class="active"><a href="{{ route('home') }}">Home</a></li>
-            <li class="active"><a href="{{ route('upload') }}">Upload File</a></li>
-            <li class="active"><a href="#">Download File</a></li>
+               <li class="active"><a href="{{ route('upload') }}">Upload File</a></li>
+               <li class="active"><a href="#">Download File</a></li>
+               <li class="active"><a href="{{ route('list-file') }}">List File</a></li>
             </ul>
             
             <ul class="nav navbar-nav navbar-right">

@@ -18,3 +18,11 @@ Route::get('/', function () {
 Route::get('/upload', function () {
     return view('file.upload');
 })->name('upload');
+
+Route::get('/list-file', function () {
+    return view('file.list-file');
+})->name('list-file');
+
+Route::get('/detail-file', function () {
+    return view('file.detail-file');
+})->name('detail-file');
