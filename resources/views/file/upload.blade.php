@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <link rel="stylesheet" href="{{ URL::asset('/public/css/upload.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/upload.css') }}">
 
 
   <body>
@@ -11,7 +11,7 @@
     <br>
     <br>
       <div class="container ">
-    <h1> Selamat Datang di DropBix Budi! </h1>
+    <h1> Selamat Datang di DropBix {{ Auth::user()->name }}! </h1>
 
     <br>
     <br>

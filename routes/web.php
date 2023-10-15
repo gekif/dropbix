@@ -19,16 +19,6 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
-
-Route::get('/daftar', function () {
-    return view('users.daftar');
-})->name('daftar');
-
-Route::get('/login', function () {
-    return view('users.login');
-})->name('login');
-
-
 Route::group(['middleware'=>'auth'], function() {
     Route::get('/upload', function () {
         return view('file.upload');
@@ -40,5 +30,6 @@ Route::group(['middleware'=>'auth'], function() {
     Route::post('update', 'FileController@update')->name('update');
 });
 
-Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
 Auth::routes();

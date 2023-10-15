@@ -17,7 +17,7 @@
     <br>
     <br>
       <div class="container ">
-    <h1> Selamat Datang di DropBix Budi! </h1>
+    <h1> Selamat Datang di DropBix {{ Auth::user()->name }}! </h1>
 
     <br>
     <br>
